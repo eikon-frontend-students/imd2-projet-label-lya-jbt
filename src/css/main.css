@@ -20,8 +20,4 @@ video {
   display: block;
 }
 h1{ font-family: "Quarantype";}
-img {
-width: 342px;
- height: 342px;
- flex-shrink: 0;
-}
+
