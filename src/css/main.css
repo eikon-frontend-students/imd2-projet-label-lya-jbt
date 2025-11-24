@@ -19,16 +19,12 @@ img,
 video {
   display: block;
 }
-body{
-    background-image: url(../img/video-background.svg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    min-width: 100vw;
 
-    
-}
+
 .navigation{
-  position: relative;        
+  position: absolute;
+  top: 0;
+  width: 100%;        
   height: 80px;
   display: flex;
   align-items: center;
@@ -65,7 +61,52 @@ body{
 h1{ font-family: "Quarantype";}
 
 .header{
- width: 1440px;
 height: 941px;
 flex-shrink: 0;
+
+margin: 0 auto;
+min-height: 940px; /* keeps header tall like your design */
+box-sizing: border-box;
+padding: 48px 24px; /* gives horizontal breathing room */
+  background-image: url(../img/video-background.jpg);
+    background-size: cover;
 }
+
+.title-home {
+  color:#FFF;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+
+  gap:20px;
+  width: 100vw;
+}
+
+.green1{
+color:  #00E200;
+font-size: 150px;
+font-style: normal;
+font-weight: 400;
+}
+
+p {
+  font-family: "General Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color:#FFF;
+}
+.our-artists{
+  background-color: black;
+  color: #00E200;
+  font-size: 40px;
+  gap: 20px;
+}
+.artists-picture{
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+}
+
+
