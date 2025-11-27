@@ -114,6 +114,18 @@ p {
     background-size: cover;
     display: flex;
 }
+.about-us{
+  background-color: black;
+  color: #FFF;
+}
+.what-in-store{
 
+  color: #FFF;
+  background-color: black;
+}
+.articles{
+    display: flex;
+  flex-direction: row;
+}
 
   
