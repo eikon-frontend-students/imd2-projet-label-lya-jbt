@@ -9,6 +9,12 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+
+  font-family: "General-sans";
+  src: url("/src/font/GeneralSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 a {
@@ -19,7 +25,6 @@ img,
 video {
   display: block;
 }
-
 
 .navigation{
   position: absolute;
@@ -33,6 +38,7 @@ video {
 }
 .navigation a {
   text-decoration: none;
+  font-family: General-sans;
 }
 .nav-list{
   position: absolute;
@@ -57,36 +63,32 @@ video {
   flex-shrink: 0;
 
 }
-
-h1{ font-family: "Quarantype";}
-
 .header{
-height: 941px;
-flex-shrink: 0;
-
-margin: 0 auto;
-min-height: 940px; 
-box-sizing: border-box;
-padding: 48px 24px; 
+  height: 941px;
+  flex-shrink: 0;
+  margin: 0 auto;
+  min-height: 940px; 
+  box-sizing: border-box;
+  padding: 48px 24px; 
   background-image: url(../img/video-background.jpg);
-    background-size: cover;
+  background-size: cover;
 }
 
 .title-home {
   color:#FFF;
+  font-family: Quarantype;
   font-size: 150px;
   font-style: normal;
   font-weight: 400;
-
   gap:20px;
   width: 100vw;
 }
 
 .green1{
-color:  #00E200;
-font-size: 150px;
-font-style: normal;
-font-weight: 400;
+  color:  #00E200;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 p {
@@ -110,21 +112,20 @@ p {
 }
 .latest-releases{
   background-color: black;
- background-image: url(../img/béton.png);
-    background-size: cover;
-    display: flex;
+  background-image: url(../img/béton.png);
+  background-size: cover;
+  display: flex;
 }
 .about-us{
   background-color: black;
   color: #FFF;
 }
 .what-in-store{
-
   color: #FFF;
   background-color: black;
 }
 .articles{
-    display: flex;
+  display: flex;
   flex-direction: row;
 }
 .container{
