@@ -9,7 +9,9 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
 
+@font-face {
   font-family: "General-sans";
   src: url("/src/font/GeneralSans-Regular.woff2") format("woff2");
   font-weight: normal;
@@ -25,7 +27,9 @@ img,
 video {
   display: block;
 }
-
+h1{
+  font-family: Quarantype;
+}
 .navigation{
   position: absolute;
   top: 0;
@@ -92,7 +96,7 @@ video {
 }
 
 p {
-  font-family: "General Sans";
+  font-family: "General-sans";
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
