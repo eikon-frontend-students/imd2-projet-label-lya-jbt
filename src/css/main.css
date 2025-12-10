@@ -114,6 +114,11 @@ p {
   flex-direction: row;
   background-color: black;
 }
+.artist-name{
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+}
 .latest-releases{
   background-color: black;
   background-image: url(../img/béton.png);
@@ -136,6 +141,10 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.yeat-page{
+  background-color: black;
+}
+
 .footer{
   background-color: #00E200;
 }
