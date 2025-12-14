@@ -223,54 +223,49 @@ h1{
   font-family: 'Quarantype', sans-serif; 
 }
 
-.latest-releases{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
+.latest-releases {
   background-color: black;
+    background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 30%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 30%
+    ),
+    url("../img/béton.png");
+
+  background-size: cover;
   padding: 80px 36px;
   color: white;
-  text-align: center;
-  background-color: black;
-  background-image: url(../img/béton.png);
-  background-size: cover;
 }
 
 .latest-releases h1 {
   font-family: Quarantype;
   font-size: 60px;
-}
-
-.latest-releases {
-  display: flex;
-  flex-direction: column; /* keep title stacked */
-  align-items: center;
-  gap: 48px;
-  background-color: black;
-  padding: 80px 36px;
-  color: white;
-  text-align: center;
+  margin-bottom: 48px;
+  text-align: left;
 }
 
 .vinyl-container {
-  display: flex;           /* horizontal row */
-  flex-direction: row;
-  gap: 48px;               /* space between cards */
-  justify-content: center; /* center the row */
-  flex-wrap: wrap;         /* wrap on small screens */
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 
 .vinyl-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
 }
 
 .vinyl-card img {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
   transition: transform 0.3s linear;
@@ -284,27 +279,108 @@ h1{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.vinyl-text {
+  text-align: center;
+}
 
 .vinyl-text p {
   margin: 4px 0;
   font-family: 'General-sans', sans-serif;
-  font-size: 18px;
   color: white;
 }
-
-
-.about-us{
-  background-color: black;
-  color: #FFF;
+.vinyl-text .artist-name {
+  font-weight: 400;
+  font-size: 18px;
 }
-.what-in-store{
-  color: #FFF;
-  background-color: black;
+.vinyl-text .release-title {
+  font-weight: 700;
+  font-size: 18px;
 }
-.articles{
+
+.vinyl-text .release-meta {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.about-us {
+  background-color: black;
+  color: white;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+
+  padding: 140px 36px;
+  gap: 80px;
+
+  position: relative;
+}
+.about-left h2 {
+  font-family: 'General-sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #00E200;
+  margin-bottom: 24px;
+}
+
+.about-left h1 {
+  font-family: Quarantype;
+  font-size: 72px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.about-left p {
+  font-family: 'General-sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 520px;
+}
+.green {
+  color: #00E200;
+}
+.about-right {
+  position: relative;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+.about-photo {
+  width: 320px;
+  z-index: 2;
+}
+.about-map {
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  opacity: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .about-us {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-right {
+    order: -1;
+  }
+
+  .about-map {
+    display: none;
+  }
+
+  .about-left h1 {
+    font-size: 56px;
+  }
+}
+
+
 .container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
