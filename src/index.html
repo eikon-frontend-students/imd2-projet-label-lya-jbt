@@ -11,27 +11,59 @@
   <include src="./components/nav.html"></include>
 
 <div class="header">
-  <h1 class="title-home">Culture & <span class="green1">Music</span></h1>
-  <div class="subtitle"><p>Fueled by passion and the desire to reimagine what it means to be a music company.</p></div>
-    <div class="discover">
-      <button> DISCOVER </button>
-      <img class="discover" src="icon/discover-icon.svg"></img>
-    </div>
+  <div class="marquee-container">
+    <h1 class="title-home">
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+            <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+    </h1>
+  </div>
+  <div class="subtitle">
+    <p>
+      Fueled by <span class="highlight">passion</span> and the desire to reimagine<br>
+      what it means to be a <span class="highlight">music company</span>.
+    </p>
+  </div>
+  <div class="discover">
+    <a href="#our-artists" class="discover-link">
+      DISCOVER
+      <img src="icon/discover-icon.svg" alt="Discover">
+    </a>
+  </div>
 </div>
-<div class="our-artists">
+<div class="our-artists" id="our-artists">
   <h1>Our Artists</h1>
-  <div class="artists-picture">
+  <div class="artists-grid">
+    <div class="artist-card">
       <a href="yeat.html"><img src="img/artists/yeat.jpg" alt="Yeat"></a>
-      <img src="img/artists/mallory.jpg" alt="Mallory merk">
-      <img src="img/artists/ssgkobe.jpg" alt="ssgkobe">
+      <p>Yeat</p>
+    </div>
+    <div class="artist-card">
+      <img src="img/artists/mallory.jpg" alt="Mallory Merk">
+      <p>Mallory Merk</p>
+    </div>
+    <div class="artist-card">
+      <img src="img/artists/ssgkobe.jpg" alt="SSGKOBE">
+      <p>SSGKOBE</p>
+    </div>
   </div>
-  <div class="artist-name">
-    <p>Yeat</p>   
-    <p>Mallory Merk</p>
-    <p>SSGKOBE</p>
-  </div>
-   <a href="artistspage.html" class="button">More</a>
- </div>
+ <a href="artistspage.html" class="button more-button">More</a>
+</div>
 
 <div class="latest-releases">
 <h1>Latest releases</h1>

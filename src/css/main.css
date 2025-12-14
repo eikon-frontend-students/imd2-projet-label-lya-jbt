@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "Quarantype";
   src: url("/src/font/Quarantype-Regular.woff2") format("woff2");
@@ -38,6 +41,7 @@ h1{
   display: flex;
   align-items: center;
   padding: 0 24px;
+  z-index: 1000; 
 
 }
 .navigation a {
@@ -47,7 +51,7 @@ h1{
 .nav-list{
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* centers it */
+  transform: translateX(-50%); 
   
   display: flex;
   gap: 40px;
@@ -68,24 +72,51 @@ h1{
 
 }
 .header{
+  position: relative;
+  min-height: 100vh;     
+  display: flex;
+  flex-direction: column;
   height: 941px;
   flex-shrink: 0;
   margin: 0 auto;
-  min-height: 940px; 
   box-sizing: border-box;
-  padding: 48px 24px; 
   background-image: url(../img/video-background.jpg);
   background-size: cover;
+  overflow: hidden;
+  justify-content: center;  
+          
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
 }
 
 .title-home {
-  color:#FFF;
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  font-size: 120px;
+  font-weight: 900;
   font-family: Quarantype;
-  font-size: 150px;
-  font-style: normal;
-  font-weight: 400;
-  gap:20px;
-  width: 100vw;
+  color: #FFF;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  margin-right: 80px; 
+}
+.green1 {
+  color: #00E200;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .green1{
@@ -94,31 +125,104 @@ h1{
   font-style: normal;
   font-weight: 400;
 }
-
-p {
-  font-family: "General-sans";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color:#FFF;
+.subtitle{
+  margin: 36px;
 }
+.subtitle p {
+  font-family: 'General Sans', sans-serif;
+  font-size: 32px;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4;
+}
+.highlight {
+  color: #00E200; 
+  font-family: Quarantype; 
+  font-weight: 600;
+}
+.discover {
+  display: flex;
+  bottom: 10px;       
+  left: 50%;    
+  justify-content: center;
+  margin-top: 40px;
+}
+.discover-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: General-sans;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.discover-link img {
+  width: 16px;
+  transition: transform 0.5s ease;
+}
+.discover-link:hover img {
+  transform: translateY(6px);
+}
+.our-artists h1 {
+  font-family: Quarantype;
+  font-size: 60px;
+  padding: 50px;  
+}
+
 .our-artists{
   background-color: black;
   color: #00E200;
   font-size: 40px;
   gap: 20px;
 }
-.artists-picture{
+.artists-grid {
   display: flex;
-  flex-direction: row;
-  background-color: black;
+  justify-content: center;  
+  gap: 36px;                
+  margin: 0 36px;         
+  flex-wrap: wrap;         
+}
+.artist-card img {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 8px;               
+}
+.artist-card p {
+  font-family: 'General-sans', sans-serif;
+  font-size: 24px;
+  color: #FFF;
+  margin: 0;
 }
 .artist-name{
   display: flex;
   flex-direction: row;
   font-size: 24px;
 }
+.more-button {
+  display: flex;
+  padding: 12px 36px;
+  font-family: 'General-sans', sans-serif; 
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white; 
+  border-radius: 20px;
+  background-color: transparent; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.more-button:hover,
+.more-button:active {
+  background-color: #00E200;  
+  border: none;                
+  color: white;
+  font-family: 'Quarantype', sans-serif; 
+}
+
 .latest-releases{
   background-color: black;
   background-image: url(../img/béton.png);
@@ -220,15 +324,13 @@ p {
 .hidden {
   display: none;
 }
-
 #toggle-btn {
   background: none;
   border: none;
-  color: #007bff;
+  color: #ffffff;
   font-size: 14px;
   cursor: pointer;
 }
-
 .footer{
   background-color: #00E200;
 }
