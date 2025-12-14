@@ -656,6 +656,20 @@ h1{
 }
 .footer{
   background-color: #00E200;
-  
+  gap:20px;
+}
+.footer-title{
+  display: flex;
+  flex-direction: row;
+}
+.listes{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  text-decoration: none ;
+  font-family: General-sans;
+}
+ul{
+  list-style: none;
 }
   
