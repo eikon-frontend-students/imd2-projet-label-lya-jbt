@@ -202,7 +202,7 @@ h1{
   font-size: 24px;
 }
 .more-button {
-  display: flex;
+  display: inline-block;
   padding: 12px 36px;
   font-family: 'General-sans', sans-serif; 
   font-weight: 500;
@@ -218,17 +218,81 @@ h1{
 .more-button:hover,
 .more-button:active {
   background-color: #00E200;  
-  border: none;                
+  border: 1px solid #00E200;                
   color: white;
   font-family: 'Quarantype', sans-serif; 
 }
 
 .latest-releases{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  background-color: black;
+  padding: 80px 36px;
+  color: white;
+  text-align: center;
   background-color: black;
   background-image: url(../img/béton.png);
   background-size: cover;
-  display: flex;
 }
+
+.latest-releases h1 {
+  font-family: Quarantype;
+  font-size: 60px;
+}
+
+.latest-releases {
+  display: flex;
+  flex-direction: column; /* keep title stacked */
+  align-items: center;
+  gap: 48px;
+  background-color: black;
+  padding: 80px 36px;
+  color: white;
+  text-align: center;
+}
+
+.vinyl-container {
+  display: flex;           /* horizontal row */
+  flex-direction: row;
+  gap: 48px;               /* space between cards */
+  justify-content: center; /* center the row */
+  flex-wrap: wrap;         /* wrap on small screens */
+}
+
+.vinyl-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.vinyl-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s linear;
+}
+
+.vinyl-card:hover img {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.vinyl-text p {
+  margin: 4px 0;
+  font-family: 'General-sans', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+
 .about-us{
   background-color: black;
   color: #FFF;
@@ -333,5 +397,6 @@ h1{
 }
 .footer{
   background-color: #00E200;
+  
 }
   
