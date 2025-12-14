@@ -24,6 +24,13 @@ body{
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "credible";
+  src: url("/src/font/Crédible-Regular.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 a {
   color: inherit;
@@ -409,30 +416,26 @@ h1{
 }
 
 .upcoming-events {
-  background-color: black; /* same as store section */
+  background-color: black;
   color: white;
   padding: 80px 36px;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* vertical spacing between elements */
+  gap: 40px;
 }
 
-/* Section title */
 .upcoming-events h1 {
   font-family: Quarantype;
   font-size: 60px;
-  margin: 0; /* remove default margin */
+  margin: 0; 
 }
-
-/* Ticket container - center row */
 .ticket-container {
   display: flex;
-  justify-content: center; /* center horizontally */
+  justify-content: center;
   gap: 36px;
-  flex-wrap: wrap; /* wrap on smaller screens */
+  flex-wrap: wrap; 
 }
 
-/* Each ticket card */
 .ticket-card {
   position: relative;
   overflow: hidden;
@@ -440,18 +443,15 @@ h1{
   transition: transform 0.5s ease;
 }
 
-/* Ticket image */
 .ticket-card img {
   display: block;
   width: 300px;
   height: auto;
   border-radius: 12px;
   transition: transform 0.5s ease, filter 0.5s ease;
-  position: relative; /* needed for z-index */
-  z-index: 1; /* below overlay */
+  position: relative; 
+  z-index: 1; 
 }
-
-/* Overlay */
 .ticket-overlay {
   position: absolute;
   top: 0;
@@ -475,8 +475,6 @@ h1{
   font-size: 20px;
   font-weight: 600;
 }
-
-/* Hover effect */
 .ticket-card:hover img {
   transform: rotate(-13deg);
   filter: brightness(0.5);
@@ -572,6 +570,8 @@ h1{
   background-color: black;
   background-image: url(../img/yeat-eyes.png);
   background-repeat: no-repeat;
+  color: #FFF;
+  font-family: general-sans;
 }
 .yeat-hero {
   height: 70vh;              
@@ -582,27 +582,41 @@ h1{
   margin-top: 0;
 }
 .title-yeat {
-  font-size: 120px;         
+  color: #FFF;
+  font-family: credible;
+  font-size: 375px;         
   font-weight: 900;
   letter-spacing: 4px;
   text-transform: uppercase;
+  padding-top: 70px;
   margin: 0;
 }
-.who {
+.structure-bio{
   display: flex;
-  align-items: center;
+  gap: 36px;
+}
+.who {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   gap: 40px;           
   margin: 60px auto;
   max-width: 1000px;  
 }
 .who img {
+  margin-left: 36px;
   width: 300px;     
 }
 .who p{
+  font-family: General-sans;
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 500px;
+}
+.who h2 {
+  font-family: credible;
 }
 .yeat-socials {
   display: flex;
@@ -615,6 +629,20 @@ h1{
 .yeat-socials img {
   width: 28px;     /* adjust size here */
   height: 28px;
+}
+.yeat-latest{
+  justify-content: center;
+}
+.yeat-latest h1{
+  font-family: credible;
+  color: #FFF;
+}
+.latest-releases-card{
+  display: flex;
+  flex-direction: row;
+  color: #FFF;
+  font-family: General-sans;
+  align-items: center;
 }
 .album-row {
   display: flex;
@@ -661,6 +689,9 @@ h1{
 .footer-title{
   display: flex;
   flex-direction: row;
+}
+.footer-title h2{
+  font-family: General-sans;
 }
 .listes{
   display: flex;
