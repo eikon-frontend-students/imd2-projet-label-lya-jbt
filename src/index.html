@@ -1,150 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Field Trip Records</title>
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>eikon parcel starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    
+  </head>
+  <body>
   <include src="./components/nav.html"></include>
 
-  <div class="header">
-    <div class="marquee-container">
-      <h1 class="title-home">
-        <span class="marquee-item">Culture & <span class="green1">Music</span></span>
-        <span class="marquee-item">Culture & <span class="green1">Music</span></span>
-        <span class="marquee-item">Culture & <span class="green1">Music</span></span>
-        <span class="marquee-item">Culture & <span class="green1">Music</span></span>
-        <span class="marquee-item">Culture & <span class="green1">Music</span></span>
-        <span class="marquee-item">Culture & <span class="green1">Music</span></span>
-      </h1>
+<div class="header">
+  <div class="marquee-container">
+    <h1 class="title-home">
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+            <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+      <span class="marquee-item">
+        Culture & <span class="green1">Music</span>
+      </span>
+    </h1>
+  </div>
+  <div class="subtitle">
+    <p>
+      Fueled by <span class="highlight">passion</span> and the desire to reimagine<br>
+      what it means to be a <span class="highlight">music company</span>.
+    </p>
+  </div>
+  <div class="discover">
+    <a href="#our-artists" class="discover-link">
+      DISCOVER
+      <img src="icon/discover-icon.svg" alt="Discover">
+    </a>
+  </div>
+</div>
+<div class="our-artists" id="our-artists">
+  <h1>Our Artists</h1>
+  <div class="artists-grid">
+    <div class="artist-card">
+      <a href="yeat.html"><img src="img/artists/yeat.jpg" alt="Yeat"></a>
+      <p>Yeat</p>
     </div>
-    <div class="subtitle">
-      <p>
-        Fueled by <span class="highlight">passion</span> and the desire to reimagine<br>
-        what it means to be a <span class="highlight">music company</span>.
-      </p>
+    <div class="artist-card">
+      <img src="img/artists/mallory.jpg" alt="Mallory Merk">
+      <p>Mallory Merk</p>
     </div>
-    <div class="discover">
-      <a href="#our-artists" class="discover-link">
-        DISCOVER
-        <img src="icon/discover-icon.svg" alt="Discover">
-      </a>
+    <div class="artist-card">
+      <img src="img/artists/ssgkobe.jpg" alt="SSGKOBE">
+      <p>SSGKOBE</p>
     </div>
+     <a href="artistspage.html" class="button more-button">More</a>
+  </div>
+</div>
+
+
+<div class="latest-releases">
+  <h1>Latest releases</h1>
+
+  <div class="vinyl-container">
+    <div class="vinyl-card">
+      <img src="./img/vinyl/vinyl-yeat.png" alt="vinyl yeat">
+      <div class="vinyl-text">
+        <p class="artist-name">YEAT</p>
+        <p class="release-title">DANGEROUS SUMMER</p>
+        <p class="release-meta">EP – 2025</p>
+      </div>
+    </div>
+
+    <div class="vinyl-card">
+      <img src="./img/vinyl/vinyl-mallory.png" alt="vinyl mallory merk">
+      <div class="vinyl-text">
+        <p class="artist-name">MALLORY MERK</p>
+        <p class="release-title">THORNS</p>
+       <p class="release-meta">EP - 2022</p>
+      </div>
+       
+    </div>
+
+    <div class="vinyl-card">
+      <img src="./img/vinyl/vinyl-hvn.png" alt="vinyl hvn">
+      <div class="vinyl-text">
+       <p class="artist-name">HVN</p>
+        <p class="release-title">HEAVEN CAN'T SAVE YOU</p>
+        <p class="release-meta">ALBUM - 2023</p>
+      </div>
+    </div>
+  </div> 
+  <a href="#" class="more-button">More</a>
+</div>
+
+<div class="about-us">
+  <div class="about-left">
+    <h2>FIELD TRIP RECORDINGS</h2>
+    <h1>About us</h1>
+    <p>
+      Founded in 2018 by Zack Bia and based in
+      <span class="green">Los Angeles</span>, Field Trip Records is a
+      <span class="green">home for artists</span> who move with intention,
+      valuing originality, risk-taking, and
+      <span class="green">staying true to their vision</span>.
+    </p>
   </div>
 
-  <div class="our-artists" id="our-artists">
-    <h1>Our Artists</h1>
-    <div class="artists-grid">
-      <div class="artist-card">
-        <a href="yeat.html"><img src="img/artists/yeat.jpg" alt="Yeat"></a>
-        <p>Yeat</p>
-      </div>
-      <div class="artist-card">
-        <img src="img/artists/mallory.jpg" alt="Mallory Merk">
-        <p>Mallory Merk</p>
-      </div>
-      <div class="artist-card">
-        <img src="img/artists/ssgkobe.jpg" alt="SSGKOBE">
-        <p>SSGKOBE</p>
-      </div>
-      <a href="artistspage.html" class="button more-button">More</a>
-    </div>
+  <div class="about-right">
+    <img class="about-photo" src="./img/zackbia.png" alt="Zack Bia">
+    <img class="about-map" src="./img/map.png" alt="Map">
   </div>
+</div>
 
-  <div class="latest-releases">
-    <h1>Latest releases</h1>
-    <div class="vinyl-container">
-      <div class="vinyl-card">
-        <img src="./img/vinyl/vinyl-yeat.png" alt="vinyl yeat">
-        <div class="vinyl-text">
-          <p class="artist-name">YEAT</p>
-          <p class="release-title">DANGEROUS SUMMER</p>
-          <p class="release-meta">EP – 2025</p>
-        </div>
+<div class="what-in-store">
+  <h1 class="store-title">What's in the store ?</h1>
+
+  <div class="store-cards">
+    <img src="./img/article-1.png" alt="Store item 1">
+    <img src="./img/article-2.png" alt="Store item 2">
+    <img src="./img/article-3.png" alt="Store item 3">
+  </div>
+<a href="#" class=" button more-button">More</a>
+</div>
+
+<div class="upcoming-events">
+  <h1>Upcoming events</h1>
+  <div class="ticket-container">
+    <div class="ticket-card">
+      <img src="./img/ticket/ticket1.png" alt="concert slump6s">
+      <div class="ticket-overlay">
+        <span>Learn More</span>
       </div>
-      <div class="vinyl-card">
-        <img src="./img/vinyl/vinyl-mallory.png" alt="vinyl mallory merk">
-        <div class="vinyl-text">
-          <p class="artist-name">MALLORY MERK</p>
-          <p class="release-title">THORNS</p>
-          <p class="release-meta">EP - 2022</p>
-        </div>
+    </div>
+    <div class="ticket-card">
+      <img src="./img/ticket/ticket3.png" alt="concert SSGKOBE">
+      <div class="ticket-overlay">
+        <span>Learn More</span>
       </div>
-      <div class="vinyl-card">
-        <img src="./img/vinyl/vinyl-hvn.png" alt="vinyl hvn">
-        <div class="vinyl-text">
-          <p class="artist-name">HVN</p>
-          <p class="release-title">HEAVEN CAN'T SAVE YOU</p>
-          <p class="release-meta">ALBUM - 2023</p>
-        </div>
+    </div>
+    <div class="ticket-card">
+      <img src="./img/ticket/ticket2.png" alt="concert mallory">
+      <div class="ticket-overlay">
+        <span>Learn More</span>
       </div>
     </div>
   </div>
+  <a href="#" class="more-button upcoming-more">More</a>
+</div>
 
-  <div class="about-us">
-    <div class="about-left">
-      <h2>FIELD TRIP RECORDINGS</h2>
-      <h1>About us</h1>
-      <p>
-        Founded in 2018 by Zack Bia and based in
-        <span class="green">Los Angeles</span>, Field Trip Records is a
-        <span class="green">home for artists</span> who move with intention,
-        valuing originality, risk-taking, and
-        <span class="green">staying true to their vision</span>.
-      </p>
-    </div>
-    <div class="about-right">
-      <img class="about-photo" src="./img/zackbia.png" alt="Zack Bia">
-      <img class="about-map" src="./img/map.png" alt="Map">
-    </div>
-  </div>
-
-  <div class="what-in-store">
-    <h1 class="store-title">What's in the store ?</h1>
-    <div class="store-cards">
-      <img src="./img/article-1.png" alt="Store item 1">
-      <img src="./img/article-2.png" alt="Store item 2">
-      <img src="./img/article-3.png" alt="Store item 3">
-    </div>
-    <a href="#" class="more-button store-more">More</a>
-  </div>
-
-  <div class="upcoming-events">
-    <h1>Upcoming events</h1>
-    <div class="ticket-container">
-      <div class="ticket-card">
-        <img src="./img/ticket/ticket1.png" alt="concert slump6s">
-        <div class="ticket-overlay"><span>Learn More</span></div>
-      </div>
-      <div class="ticket-card">
-        <img src="./img/ticket/ticket3.png" alt="concert SSGKOBE">
-        <div class="ticket-overlay"><span>Learn More</span></div>
-      </div>
-      <div class="ticket-card">
-        <img src="./img/ticket/ticket2.png" alt="concert mallory">
-        <div class="ticket-overlay"><span>Learn More</span></div>
-      </div>
-    </div>
-    <a href="#" class="more-button upcoming-more">More</a>
-  </div>
-
-  <div class="artist-first">
-    <h1>Artist-First Mentality</h1>
-    <div class="artist-grid">
-      <div class="artist-photo"><img src="./img/artist-first/img1.png" alt=""></div>
-      <div class="artist-photo"><img src="./img/artist-first/img2.png" alt=""></div>
-      <div class="artist-photo"><img src="./img/artist-first/img3.png" alt=""></div>
-      <div class="artist-photo"><img src="./img/artist-first/img4.png" alt=""></div>
-      <div class="artist-photo"><img src="./img/artist-first/img5.png" alt=""></div>
-      <div class="artist-photo"><img src="./img/artist-first/img6.png" alt=""></div>
-      <div class="artist-photo"><img src="./img/artist-first/img7.png" alt=""></div>
-    </div>
-  </div>
-
-  <include src="./components/footer.html"></include>
-  <script src="js/main.js" type="module"></script>
-</body>
+<div class="artist-first">
+  <h1>Artist-First Mentality</h1>
+<img src="./img/artist-first.png" alt="">
+</div>
+ <include src="./components/footer.html"></include>
+</div>
+    <script src="js/main.js" type="module"></script>
+  </body>
 </html>
-

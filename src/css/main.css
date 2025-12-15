@@ -3,12 +3,17 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
-body{
+
+body {
   background-color: black;
+  font-family: 'General-sans', sans-serif;
+  color: #FFF;
 }
+
 @font-face {
   font-family: "Quarantype";
   src: url("/src/font/Quarantype-Regular.woff2") format("woff2");
@@ -24,9 +29,10 @@ body{
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "credible";
-  src: url("/src/font/Crédible-Regular.woff") format("woff2");
+  src: url("/src/font/Crédible-Regular.woff") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -34,67 +40,60 @@ body{
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img,
 video {
   display: block;
 }
-h1{
+
+h1 {
   font-family: Quarantype;
 }
-.navigation{
+
+.navigation {
   position: absolute;
   top: 0;
-  width: 100%;        
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
-  padding: 0 24px;
-  z-index: 1000; 
+  padding: 0 36px;
+  z-index: 1000;
+}
 
-}
-.navigation a {
-  text-decoration: none;
-  font-family: General-sans;
-}
-.nav-list{
+.nav-list {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); 
-  
+  transform: translateX(-50%);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 40px;
-
-  border: 1px solid white;
-  border-radius: 56px;
-
-  list-style: none;
-  color: white;
-  display: flex;
-
   width: 582.75px;
   height: 75px;
   padding: 6px 36px;
-  justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
-
+  border: 1px solid white;
+  border-radius: 56px;
+  list-style: none;
+  color: white;
 }
-.header{
+
+.header {
   position: relative;
-  min-height: 100vh;     
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 941px;
-  flex-shrink: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
-  background-image: url(../img/video-background.jpg);
+  justify-content: center;
+  background-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%),
+    url("../img/video-background.jpg");
+  background-size: cover;
+  background-position: center;
   background-size: cover;
   overflow: hidden;
-  justify-content: center;  
-          
+  padding: 0 36px;
 }
 
 .marquee-container {
@@ -108,158 +107,147 @@ h1{
   white-space: nowrap;
   font-size: 120px;
   font-weight: 900;
-  font-family: Quarantype;
   color: #FFF;
   animation: marquee 20s linear infinite;
 }
 
 .marquee-item {
-  margin-right: 80px; 
+  margin-right: 80px;
 }
+
 .green1 {
   color: #00E200;
+  font-size: 150px;
+  font-weight: 400;
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-.green1{
-  color:  #00E200;
-  font-size: 150px;
-  font-style: normal;
-  font-weight: 400;
-}
-.subtitle{
+.subtitle {
   margin: 36px;
 }
+
 .subtitle p {
-  font-family: 'General Sans', sans-serif;
   font-size: 32px;
-  color: #ffffff;
-  text-align: left;
   line-height: 1.4;
 }
+
 .highlight {
-  color: #00E200; 
-  font-family: Quarantype; 
+  color: #00E200;
+  font-family: Quarantype;
   font-weight: 600;
 }
+
 .discover {
   display: flex;
-  bottom: 10px;       
-  left: 50%;    
   justify-content: center;
-  margin-top: 40px;
+  margin: 40px 0;
 }
+
 .discover-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  color: white;
-  text-decoration: none;
-  font-family: General-sans;
   font-weight: 600;
   letter-spacing: 1px;
 }
+
 .discover-link img {
   width: 16px;
   transition: transform 0.5s ease;
 }
+
 .discover-link:hover img {
   transform: translateY(6px);
 }
-.our-artists h1 {
-  font-family: Quarantype;
-  font-size: 60px;
-  padding: 50px;  
-}
 
-.our-artists{
+.our-artists {
   background-color: black;
   color: #00E200;
   font-size: 40px;
-  gap: 20px;
+  gap: 36px;
+  padding: 36px;
 }
+
+.our-artists h1 {
+  font-size: 60px;
+  padding-bottom: 36px;
+}
+
 .artists-grid {
   display: flex;
-  justify-content: center;  
-  gap: 36px;                
-  margin: 0 36px;         
-  flex-wrap: wrap;         
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
 }
-.artist-card img {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
-  gap: 8px;               
-}
-.artist-card p {
-  font-family: 'General-sans', sans-serif;
+
+.artist-card p,
+.artist-name {
   font-size: 24px;
   color: #FFF;
-  margin: 0;
 }
-.artist-name{
-  display: flex;
-  flex-direction: row;
-  font-size: 24px;
-}
+
 .more-button {
   display: inline-block;
-  max-width: 144px;
-  max-height: 57px;
   padding: 12px 36px;
-  font-family: 'General-sans', sans-serif; 
-  font-weight: 500;
   font-size: 18px;
-  color: white;
-  text-decoration: none;
-  border: 1px solid white; 
+  font-weight: 500;
+  border: 1px solid white;
   border-radius: 20px;
-  background-color: transparent; 
-  transition: all 0.3s ease;
+  background-color: transparent;
+  color: white;
   cursor: pointer;
+  transition: all 0.3s ease;
+   margin-left: auto;
+  align-self: flex-end;
 }
+
 .more-button:hover,
 .more-button:active {
-  background-color: #00E200;  
-  border: 1px solid #00E200;                
-  color: white;
-  font-family: 'Quarantype', sans-serif; 
+  background-color: #00E200;
+  border-color: #00E200;
+  font-family: Quarantype;
+}
+
+.latest-releases,
+.about-us,
+.what-in-store,
+.upcoming-events,
+.artist-first,
+.yeat-page {
+  padding: 80px 36px;
+  gap: 40px;
+}
+
+.latest-releases h1,
+.about-us h1,
+.what-in-store h1,
+.upcoming-events h1,
+.artist-first h1 {
+  font-size: 60px;
 }
 
 .latest-releases {
   background-color: black;
-    background-image:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 30%
-    ),
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 30%
-    ),
-    url("../img/béton.png");
-
-  background-size: cover;
-  padding: 80px 36px;
   color: white;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%),
+    linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%),
+    url("../img/béton.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
 }
 
 .latest-releases h1 {
-  font-family: Quarantype;
-  font-size: 60px;
-  margin-bottom: 48px;
   text-align: left;
+  margin-bottom: 48px;
 }
 
 .vinyl-container {
@@ -287,49 +275,39 @@ h1{
   animation: spin 2s linear infinite;
 }
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 .vinyl-text {
   text-align: center;
 }
 
-.vinyl-text p {
-  margin: 4px 0;
-  font-family: 'General-sans', sans-serif;
-  color: white;
-}
 .vinyl-text .artist-name {
+  font-size: 18px;
   font-weight: 400;
-  font-size: 18px;
 }
+
 .vinyl-text .release-title {
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
 }
 
 .vinyl-text .release-meta {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   opacity: 0.7;
 }
 
-.about-us {
-  background-color: black;
-  color: white;
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
+.about-us {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   align-items: center;
-
-  padding: 140px 36px;
   gap: 80px;
-
-  position: relative;
 }
+
 .about-left h2 {
-  font-family: 'General-sans', sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -338,174 +316,134 @@ h1{
 }
 
 .about-left h1 {
-  font-family: Quarantype;
   font-size: 60px;
   font-weight: 400;
+  color: #00E200;
   margin-bottom: 32px;
 }
 
 .about-left p {
-  font-family: 'General-sans', sans-serif;
   font-size: 20px;
   line-height: 1.6;
   max-width: 520px;
 }
-.green {
-  color: #00E200;
-}
+
 .about-right {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .about-photo {
   width: 320px;
   z-index: 2;
 }
+
 .about-map {
   position: absolute;
   right: -120px;
   top: 50%;
   transform: translateY(-50%);
   width: 600px;
-  opacity: 100%;
-  z-index: 1;
   pointer-events: none;
+  z-index: 1;
 }
+.green{
+  color: #00E200;
+}
+
 @media (max-width: 900px) {
   .about-us {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-
-  .about-right {
-    order: -1;
-  }
-
-  .about-map {
-    display: none;
-  }
-
-  .about-left h1 {
-    font-size: 56px;
-  }
+  .about-right { order: -1; }
+  .about-map { display: none; }
+  .about-left h1 { font-size: 56px; }
 }
-.what-in-store{
-  background-color: black;
-  color: #FFF;
-  align-items: center;
-
-}
-.store-title{
-  font-size: 60px ;
-  margin-left: 36px;
-}
-.store-cards{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 36px;
-  padding: 36px;
-}
-.store-more {
-  display: block;           
-  margin: 36px 0 36px auto;   
-  text-align: center;
-}
-
-.upcoming-events {
-  background-color: black;
-  color: white;
-  padding: 80px 36px;
+.what-in-store {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px; 
+  align-items: stretch;
+}
+.store-cards {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  padding: 36px 0;
 }
 
-.upcoming-events h1 {
-  font-family: Quarantype;
-  font-size: 60px;
-  margin: 0; 
-}
 .ticket-container {
   display: flex;
   justify-content: center;
-  gap: 36px;
-  flex-wrap: wrap; 
+  gap: 66px;
+  flex-wrap: wrap;
 }
 
 .ticket-card {
   position: relative;
-  overflow: hidden;
   cursor: pointer;
+  overflow: hidden;
   transition: transform 0.5s ease;
 }
 
 .ticket-card img {
-  display: block;
   width: 300px;
   height: auto;
   border-radius: 12px;
   transition: transform 0.5s ease, filter 0.5s ease;
-  position: relative; 
-  z-index: 1; 
 }
+
 .ticket-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
   border-radius: 12px;
-  z-index: 10; /* above image */
+  transition: opacity 0.3s ease;
+  z-index: 10;
 }
 
 .ticket-overlay span {
   color: white;
-  font-family: 'General-sans', sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
+
 .ticket-card:hover img {
   transform: rotate(-13deg);
   filter: brightness(0.5);
 }
 
-.ticket-card:hover .ticket-overlay {
-  opacity: 1;
+.ticket-card:hover .ticket-overlay { opacity: 1; }
+.upcoming-events {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: stretch; 
+  padding: 80px 36px;  
 }
 .upcoming-more {
-  display: block;
-  margin-left: auto; 
+  display: inline-block;
+  margin-left: auto;
 }
-@media (max-width: 768px) {
-  .ticket-container {
-    justify-content: center;
-    gap: 20px;
-  }
 
-  .ticket-card img {
-    width: 90%;
-  }
-
-  .ticket-overlay span {
-    font-size: 16px;
-  }
-
-  .upcoming-more {
-    margin-left: 0;
-    align-self: center; 
+@media (max-width: 900px) {
+  .artist-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
   }
 }
+
 
 .artist-first {
   background-color: black;
@@ -533,38 +471,7 @@ h1{
   grid-template-rows: auto auto;      
   gap: 20px;                               
 }
-.artist-grid .artist-photo:nth-child(5) {
-  grid-column: 1 / 2; 
-  grid-row: 2 / 3;    
-}
 
-.artist-grid .artist-photo:nth-child(6) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.artist-grid .artist-photo:nth-child(7) {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
-.artist-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-@media (max-width: 900px) {
-  .artist-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: auto;
-  }
-
-  .artist-grid .artist-photo:nth-child(n+5) {
-    grid-column: auto;
-    grid-row: auto;
-  }
-}
 .artists-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -625,18 +532,26 @@ h1{
   display: flex;
   gap: 36px;
 }
+.structure-bio img{
+  margin-bottom: 36px;
+  margin-top: 36px;
+  size: 100%;
+}
 .who {
   color: #FFF;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  gap: 40px;           
-  margin: 60px auto;
+  align-items: flex-start;
+  gap: 30px;           
+  margin: 30px auto;
   max-width: 1000px;  
+  
 }
 .who img {
-  margin-left: 36px;
-  width: 300px;     
+  width: 140px;      
+  height: auto;
+  margin-left: 0;    
+  display: block;   
 }
 .who p{
   font-family: General-sans;
@@ -647,6 +562,9 @@ h1{
 }
 .who h2 {
   font-family: credible;
+}
+.who ul{
+  list-style: none;
 }
 .yeat-socials {
   display: flex;
@@ -665,7 +583,7 @@ h1{
   flex-direction: column;
   align-items: center;  
   gap: 40px;
-  
+  padding: 0 36px;
 }
 .yeat-latest h1{
   font-family: credible;
@@ -680,6 +598,13 @@ h1{
   align-items: center;
   justify-content: center; 
   gap: 200px;
+  padding: 0 36px;
+}
+.latest-releases-card ul{
+  list-style: none; 
+  padding: 0;
+  margin:16px 0 0 0;
+  text-align: center;
 }
 
 .yeat-latest .more-button {
@@ -690,7 +615,16 @@ h1{
   flex-direction: column;
   align-items: flex-start; 
   gap: 50px;
-  padding: 0 36px;
+  padding: 80px 36px;
+
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%),
+    linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%),
+    url("../img/background-albums.png"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
 }
 .yeat-albums h1{
   font-family: credible;
@@ -698,25 +632,33 @@ h1{
 
 .album-row {
   display: flex;
+  flex-direction: row;
   justify-content: center; 
-  gap: 20px;
+  gap: 60px;
   width: 100%;
+}
+.album-row h3{
+  justify-content: center;
+  align-items: center;
 }
 
 .album-card {
-  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
   text-align: center;
   font-family: sans-serif;
 }
 
 .album-card img {
   width: 100%;
-  border-radius: 8px;
 }
 
-.album-card h3 {
-  margin: 8px 0 2px;
-  font-size: 16px;
+.album-card h3,
+.album-card p {
+  margin: 4px 0;
+  text-align: center;
 }
 
 .album-card p {
@@ -736,21 +678,55 @@ h1{
   cursor: pointer;
   align-self: center;
 }
-upcoming-concert{
+.upcoming-concert{
   color: #FFF;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 36px; 
+  align-items: flex-start;
+  gap: 50;
 }
-
+.upcoming-concert h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: credible;
+}
+.store{
+  display: flex;
+  flex-direction: column;
+  padding: 80px 36px; 
+}
+.store h2{
+  font-family: credible;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+ 
+}
 
 .footer{
   background-color: #00E200;
   gap:20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 1441px;
+  height: 300px;
+  padding: 36px 80px;
 }
 .footer-title{
   display: flex;
   flex-direction: row;
+  gap: 30px ;
 }
 .footer-title h2{
+ color:#000;
   font-family: General-sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .listes{
   display: flex;
@@ -759,7 +735,13 @@ upcoming-concert{
   text-decoration: none ;
   font-family: General-sans;
 }
-ul{
+.listes h3{
+  font-size: 13px;
+}
+.listes li{
+  font-size:20px;
+}
+.listes ul{
   list-style: none;
 }
   
