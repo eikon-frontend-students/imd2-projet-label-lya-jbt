@@ -1,6 +1,12 @@
 const toggleBtn = document.getElementById('toggle-btn');
 const row2 = document.getElementById('album-row-2');
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-list');
 
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
 toggleBtn.addEventListener('click', () => {
   row2.classList.toggle('hidden');
   toggleBtn.textContent = row2.classList.contains('hidden')
@@ -35,3 +41,4 @@ vinylCards.forEach(card => {
     audioPlayer.play();
   });
 });
+

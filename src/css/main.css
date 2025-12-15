@@ -43,9 +43,10 @@ a {
   text-decoration: none;
 }
 
-img,
-video {
+img, video {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -467,12 +468,12 @@ color: #00E200;
 }
 .artist-first img {
   width: 100%;
-  max-width: 1440px;   /* cap size on large screens (adjust as needed) */
+  max-width: 1440px;   
   height: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto;
-  border-radius: 8px; /* optional visual polish */
+  border-radius: 8px; 
 }
 .artist-grid {
   display: grid;
@@ -488,7 +489,6 @@ color: #00E200;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 36px;
-
   max-width: 1200px;
   margin: 80px auto;
   padding: 0;
@@ -499,6 +499,8 @@ color: #00E200;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .artists-list img {
@@ -513,8 +515,40 @@ color: #00E200;
 .artists-list img:hover {
   transform: scale(1.04);
 }
-
-
+.artist-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.artist-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.75) 100%);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 200ms ease, transform 200ms ease;
+  pointer-events: none;
+}
+.artists-list li:hover .artist-overlay,
+.artists-list li:focus-within .artist-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.artists-list li:hover img,
+.artists-list li:focus-within img {
+  transform: scale(1.03);
+}
+.artist-link:focus .artist-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
 .yeat-page{
   background-color: black;
   background-image: url(../img/yeat-eyes.png);
@@ -716,7 +750,6 @@ color: #00E200;
   font-weight: 600;
  
 }
-
 .footer{
   background-color: #00E200;
   gap:20px;
@@ -758,5 +791,209 @@ color: #00E200;
 }
 .listes ul{
   list-style: none;
+}
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: white;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+
+ 
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 42px !important;
+  }
+
+
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    background-color: black;
+    border: none;
+    border-radius: 0;
+    transition: transform 0.4s ease;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+  .header {
+    padding: 0 16px;
+  }
+
+  .title-home {
+    font-size: 64px;
+    animation-duration: 30s;
+  }
+
+  .green1 {
+    font-size: 80px;
+  }
+
+  .subtitle {
+    margin: 24px 0;
+  }
+
+  .subtitle p {
+    font-size: 20px;
+  }
+
+
+  .artists-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artist-card p,
+  .artist-name {
+    font-size: 18px;
+  }
+
+
+  .vinyl-container {
+    gap: 32px;
+  }
+
+  .vinyl-card img {
+    width: 260px;
+    height: 260px;
+  }
+
+
+  .about-us {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 16px;
+  }
+
+  .about-left h1 {
+    font-size: 42px;
+  }
+
+  .about-left p {
+    font-size: 16px;
+  }
+
+  .about-photo {
+    width: 220px;
+  }
+
+ 
+  .store-cards {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+
+  .ticket-container {
+    gap: 32px;
+  }
+
+  .ticket-card img {
+    width: 240px;
+  }
+
+
+  .artist-first h1 {
+    font-size: 42px;
+    margin-left: 16px;
+  }
+
+  .artist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .artists-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+
+  .yeat-hero {
+    height: 50vh;
+  }
+
+  .title-yeat {
+    font-size: 120px;
+    padding-top: 40px;
+  }
+
+  .structure-bio {
+    flex-direction: column;
+  }
+
+  .who {
+    padding: 0 16px;
+  }
+
+  .latest-releases-card {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .album-row {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+
+  .footer {
+    padding: 36px 24px;
+    height: auto;
+  }
+
+  .footer-title {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .listes {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
   
