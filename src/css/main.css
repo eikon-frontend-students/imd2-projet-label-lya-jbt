@@ -565,6 +565,36 @@ h1{
     grid-row: auto;
   }
 }
+.artists-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0;
+
+  list-style: none;
+}
+.artists-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artists-list img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.artists-list img:hover {
+  transform: scale(1.04);
+}
+
 
 .yeat-page{
   background-color: black;
@@ -649,8 +679,9 @@ h1{
   font-family: General-sans;
   align-items: center;
   justify-content: center; 
-  gap: 36px;
+  gap: 200px;
 }
+
 .yeat-latest .more-button {
   margin-top: 32px;
 }
@@ -658,7 +689,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
-  gap: 32px;
+  gap: 50px;
   padding: 0 36px;
 }
 .yeat-albums h1{
@@ -708,6 +739,8 @@ h1{
 upcoming-concert{
   color: #FFF;
 }
+
+
 .footer{
   background-color: #00E200;
   gap:20px;
