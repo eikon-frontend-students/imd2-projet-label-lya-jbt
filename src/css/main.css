@@ -627,15 +627,20 @@ h1{
 }
 
 .yeat-socials img {
-  width: 28px;     /* adjust size here */
+  width: 28px;    
   height: 28px;
 }
-.yeat-latest{
-  justify-content: center;
+.yeat-latest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 40px;
+  
 }
 .yeat-latest h1{
   font-family: credible;
   color: #FFF;
+  align-self: flex-start;
 }
 .latest-releases-card{
   display: flex;
@@ -643,11 +648,28 @@ h1{
   color: #FFF;
   font-family: General-sans;
   align-items: center;
+  justify-content: center; 
+  gap: 36px;
 }
+.yeat-latest .more-button {
+  margin-top: 32px;
+}
+.yeat-albums {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  gap: 32px;
+  padding: 0 36px;
+}
+.yeat-albums h1{
+  font-family: credible;
+}
+
 .album-row {
   display: flex;
+  justify-content: center; 
   gap: 20px;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 .album-card {
@@ -681,6 +703,10 @@ h1{
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
+  align-self: center;
+}
+upcoming-concert{
+  color: #FFF;
 }
 .footer{
   background-color: #00E200;
