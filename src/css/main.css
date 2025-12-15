@@ -342,10 +342,10 @@ h1 {
 
 .about-map {
   position: absolute;
-  right: -120px;
+  right: -25px;
   top: 50%;
   transform: translateY(-50%);
-  width: 600px;
+  max-width: 600px;
   pointer-events: none;
   z-index: 1;
 }
@@ -374,7 +374,9 @@ h1 {
   gap: 90px;
   padding: 36px 0;
 }
-
+.upcoming-events h1{
+color: #00E200;
+}
 .ticket-container {
   display: flex;
   justify-content: center;
@@ -461,6 +463,16 @@ h1 {
   margin: 0;
   text-align:left;
   color: white;
+  margin-left: 36px;
+}
+.artist-first img {
+  width: 100%;
+  max-width: 1440px;   /* cap size on large screens (adjust as needed) */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* optional visual polish */
 }
 .artist-grid {
   display: grid;
@@ -711,7 +723,10 @@ h1 {
   color: black;
   display: flex;
   flex-direction: column;
-  width: 1441px;
+  width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
   height: 300px;
   padding: 36px 80px;
 }
